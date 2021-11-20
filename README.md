@@ -13,8 +13,9 @@ It's the builder process from baritone but the bot will source missing materials
 3.) Type "@build myschem.schem" in the chat  
 
 ### TODO/ISSUES:
-- Anti mine protection zone facing needs to be fixed to be relative to the player facing.
-- Anti mine protection zones are not seperated by world.
+- Anti mine protection zone facing needs to be fixed to be relative to the player facing  
+- Anti mine protection zones are not seperated by world  
+- Anti mine protection zones are not seperated by dimension  
 
 ## - autofill (WIP)
 ### Description:
