@@ -12,8 +12,9 @@ It's the builder process from baritone but the bot will source missing materials
 2.) Place a schematic file in "schematics" that is supported by baritone (As an example "myschem.schem")  
 3.) Type "@build myschem.schem" in the chat  
 
-### TODO:
-Anti mine protection zone facing needs to be fixed to be relative to the player facing.
+### TODO/ISSUES:
+- Anti mine protection zone facing needs to be fixed to be relative to the player facing.
+- Anti mine protection zones are not seperated by world.
 
 ## - autofill (WIP)
 ### Description:
