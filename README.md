@@ -1,52 +1,84 @@
-# altoclef
-Plays block game.
+# Meloweh's altoclef fork
+This fork adds some additional features to altoclef.  
+You can find the new features in my branch "Meloweh".
 
-Powered by Baritone.
+# New commands
+## - build (WIP)
+### Description:
+It's the builder process from baritone but the bot will source missing materials by itself.
 
-A client side bot that can accomplish any Minecraft task that is relatively simple and can be split into smaller tasks. "Relatively Simple" is a vague term, so check the list of current capabilities to see examples.
+### Usage: 
+1.) Ensure that the directory ".minecraft/schematics/" exists  
+2.) Place a schematic file in "schematics" that is supported by baritone (As an example "myschem.schem")  
+3.) Type "@build myschem.schem" in the chat  
 
-Became [the first bot to beat Minecraft fully autonomously](https://youtu.be/baAa6s8tahA) on May 24, 2021.
+### TODO:
+Anti mine protection zone facing needs to be fixed to be relative to the player facing.
 
-**Join the [Discord Server](https://discord.gg/fUUEHeNmXb)** for discussions/updates/goofs & gaffs
+## - autofill (WIP)
+### Description:
+Allows you to choose a chest and let the bot source and fill it with stuff you have specified.
 
-## How it works
+### Usage:
+1.) Look at a chest so that it is selected by the cursor block selection  
+2.) Type "@autofill dirt" for an example  
 
-Take a look at this [Guide from the wiki](https://github.com/gaucho-matrero/altoclef/wiki/1:-Documentation:-Big-Picture) or this [Video explanation](https://youtu.be/q5OmcinQ2ck?t=387)
+### TODO:
+If the inventory is full then non throwaway materials should be stored in a chest either somewhere around or in a 
+base.
 
-## Current capabilities, Examples:
-- Obtain 400+ Items from a fresh survival world, like diamond armor, cake, and nether brick stairs
-- Dodge mob projectiles and force field mobs away while accomplishing arbitrary tasks
-- Collect + smelt food from animals, hay, & crops
-- Receive commands from chat whispers via /msg. Whitelist + Blacklist configurable (hereby dubbed the Butler System). Here's a [Butler system demo video](https://drive.google.com/file/d/1axVYYMJ5VjmVHaWlCifFHTwiXlFssOUc/view?usp=sharing)
-- Simple config file that can be reloaded via command (check .minecraft directory)
-- Beat the entire game on its own (no user input.)
-- Print the entire bee movie script with signs in a straight line, automatically collecting signs + bridging materials along the way.
-- Become the terminator: Run away from players while unarmed, gather diamond gear in secret, then return and wreak havoc.
+## - roundtrip
+### Description:
+Allows you to do tasks and return where you started.
+It also allows you to create and save macros out of altoclef commands. That means you can queue a chain of tasks.
+
+### Usage:
+- "@roundtrip" queues a new milestone  
+
+  #### Example:  
+  @roundtrip push get coal 3  
+  
+  Now a milestone has been added to the queued chain  
+
+- "@roundtrip start" executes the queued chain  
+
+  #### Example:  
+  @roundtrip get coal 3  
+  @roundtrip get oak_log 2  
+  @roundtrip build myschem.schem  
+  @roundtrip start  
+
+  Now the bot will first collect 3 coal, then 2 oak_log and then it tries to build the schematic myschem.schem.  
+
+- "@roundtrip stop" stops execution of the queued chain  
+- "@roundtrip clear" clears the queued chain  
+- "@roundtrip clear" stops and clears the queued chain  
+- "@roundtrip list" prints the queue  
+- "@roundtrip push" pushes a new command to the macro queue  
+
+  #### Example:  
+  @roundtrip push get coal 3  
+
+  Now task "get coal 3" has been added to the macro queue
+
+- "@roundtrip flushas" will save the current macro queue and flushes memory  
+
+  #### Example:  
+  @roundtrip push get coal 3  
+  @roundtrip push get oak_log 2  
+  @roundtrip push build myschem.schem  
+  @roundtrip flushas myCoolMacro  
+
+  Now you can let the bot do the exact same thing like in the first @roundtrip example by just typing:  
+  @roundtrip myCoolMacro  
+
+- "@roundtrip flush" removes all pushed macros from memory  
+- "@roundtrip remove" removes a saved macro from the hard drive  
+
+  #### Example:  
+  @roundtrip remove myCoolMacro  
+  
+  Now a macro that was named myCoolMacro will be removed from the hard drive  
 
 
-## Download
 
-**Note:** After installing, please move/delete your old baritone configurations if you have any. Preexisting baritone configurations will interfere with altoclef and introduce bugs. This will be fixed in the future.
-
-### Nightly Release (Recommended) (has the latest bug fixes)
-
-Start by downloading [the Latest Long Term Release](https://github.com/gaucho-matrero/altoclef/releases), then [Download the Nightly](https://nightly.link/gaucho-matrero/altoclef/workflows/gradle/main/Artifacts.zip) & replace `altoclef-1.0-SNAPSHOT.jar`.
-
-If the Nightly Link doesn't work, check the latest [Build Action](https://github.com/gaucho-matrero/altoclef/actions) that succeeded and download `Artifacts.zip` (you must be signed into GitHub). Replace your existing `altoclef-1.0-SNAPSHOT.jar` with the one found in `Artifacts.zip`
-
-### Long Term Release
-
-[Check releases](https://github.com/gaucho-matrero/altoclef/releases). Note you will need to copy over both jar files for the mod to work.
-
-### Versions
-
-This is a **fabric only** mod, currently only available for **Minecraft 1.17**.
-
-For older MC versions, try [multiconnect](https://www.curseforge.com/minecraft/mc-mods/multiconnect) (NOTE: multiconnect is untested and not affiliated with altoclef, use at your own risk!)
-
-
-## [Usage Guide](usage.md)
-
-## [TODO's/Future Features](todos.md)
-
-## [Development Guide](develop.md)
