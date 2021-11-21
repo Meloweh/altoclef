@@ -13,7 +13,11 @@ It's the builder process from baritone but the bot will source missing materials
 3.) Type "@build myschem.schem" in the chat  
 
 ### TODO/ISSUES:
-- Anti mine protection zone facing needs to be fixed to be relative to the player facing  
+- Softlock scenario: Need 1 cobble, mine straight down, find one, tries to stack up with the same cobble to attempt to get out of the hole, repeat.
+- Softlock scenario: Want to go to roof of schematic, stacks up in the schematic zone with random blocks but tries to remove those since mostly air is wanted at those positions, repeat.
+- There is yet another crafting softlock in default baritone that breaks to builder
+- There is a similar soft lock in the furnace task like the one I fixed in update alpha.3
+- It happens that after a while the builder task repeats to collect more materials after just one block was placed.
 - Anti mine protection zones are not seperated by world  
 - Anti mine protection zones are not seperated by dimension  
 
