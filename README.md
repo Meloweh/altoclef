@@ -15,7 +15,7 @@ It's the builder process from baritone but the bot will source missing materials
 ### TODO/ISSUES:
 - Softlock scenario: Need 1 cobble, mine straight down, find one, tries to stack up with the same cobble to attempt to get out of the hole, repeat
 - Softlock scenario: Want to go to roof of schematic, stacks up in the schematic zone with random blocks but tries to remove those since mostly air is wanted at those positions, repeat.
-- There is yet another crafting softlock in default altoclef that breaks to builder
+- There is yet another crafting softlock in default altoclef that breaks the builder
 - There is a similar soft lock in the furnace task like the one I fixed in update alpha.3
 - It can happen that after a while the builder task repeats to collect more materials after just one block was placed
 - Anti mine protection zones are not seperated by world  
