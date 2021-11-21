@@ -38,7 +38,7 @@ It also allows you to create and save macros out of altoclef commands. That mean
 - "@roundtrip" queues a new milestone  
 
   #### Example:  
-  @roundtrip push get coal 3  
+  @roundtrip get coal 3  
   
   Now a milestone has been added to the queued chain  
 
@@ -54,7 +54,7 @@ It also allows you to create and save macros out of altoclef commands. That mean
 
 - "@roundtrip stop" stops execution of the queued chain  
 - "@roundtrip clear" clears the queued chain  
-- "@roundtrip clear" stops and clears the queued chain  
+- "@roundtrip reset" stops and clears the queued chain  
 - "@roundtrip list" prints the queue  
 - "@roundtrip push" pushes a new command to the macro queue  
 
