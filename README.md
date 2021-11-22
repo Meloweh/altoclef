@@ -34,6 +34,10 @@ Allows you to choose a chest and let the bot source and fill it with stuff you h
 If the inventory is full then non throwaway materials should be stored in a chest either somewhere around or in a 
 base.
 
+### ISSUES:
+- Crash if no item specified in command
+- Crash if non existing item specified
+
 ## - roundtrip
 ### Description:
 Allows you to do tasks and return where you started.
