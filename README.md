@@ -17,7 +17,7 @@ It's the builder process from baritone but the bot will source missing materials
 - (Unconfirmed) Softlock scenario: Want to go to roof of schematic, stacks up in the schematic zone with random blocks but tries to remove those since mostly air is wanted at those positions, repeat.
 - ~~There is yet another crafting softlock in default altoclef that breaks the builder~~
 - (Unconfirmed) There is a similar soft lock in the furnace task like the one I fixed in update alpha.3
-- It can happen that after a while the builder task repeats to collect more materials after just one block was placed
+- It can occur that after a while the builder task repeats to collect more materials after just one block was placed
 - Anti mine protection zones are not seperated by world  
 - Anti mine protection zones are not seperated by dimension
 - Unsupported blocks should become support but until then they be ignored
@@ -36,8 +36,8 @@ If the inventory is full then non throwaway materials should be stored in a ches
 base.
 
 ### ISSUES:
-- Crash if no item specified in command
-- Crash if non existing item specified
+- ~~Crash if no item specified in command~~
+- ~~Crash if non existing item specified~~
 
 ## - roundtrip
 ### Description:
