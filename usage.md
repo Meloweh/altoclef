@@ -27,6 +27,18 @@ Commands are prefixed with `@`. Here's a list along with their functions:
 | `gamma [brightness=1]` | Sets the game's gamma. Useful for testing. 0 is "Moody" and 1 is "Bright", and you can go beyond to enable fullbright. | `@gamma 1000` |
 | `status` | Prints the status of the currently executing command. Mostly useful when running through `/msg`. | |
 | `stop` | Forcefully stops the currently running command. The shortcut `CTRL+K` also achieves this. | |
+| `build <schematic>` | Look at https://github.com/cabaletta/baritone/blob/master/USAGE.md#commands
+| `autofill [item]` | Allows you to choose a chest and let the bot source and fill it with stuff you have specified.
+| `roundtrip [command]` | Allows you to do tasks and return where you started. It also allows you to create and save macros out of altoclef commands. That means you can queue a chain of tasks.
+| `roundtrip start` | Run the commands in the queue one by one
+| `roundtrip stop` | Stops execution of the queued chain
+| `roundtrip clear` | Clears the queued chain
+| `roundtrip reset` | Stops and clears the queued chain
+| `roundtrip list` | Prints the queue
+| `roundtrip push [command]` | Pushes a new command to the macro queue
+| `roundtrip flushas [alias]` | Save the current macro queue and flushes memory
+| `roundtrip [alias]` | Runs the roundtrip with the alias
+| `roundtrip remove [alias]` | Removes a saved macro from the hard drive
 | `test [testname=<run idle test>]` | Runs a "test" command. These vary, and will be described below. | |
 
 ### Notable test commands
